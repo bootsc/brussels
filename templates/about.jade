@@ -1,0 +1,13 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title= locals.title
+    link(rel='stylesheet', href='/css/main.css')
+  body
+    div.nav
+        a(href="/about")= 'ABOUT'
+        p.copyright &#169; David Bouchat 2015
+    div.contents 
+        h1= page.title
+        != page.html 
