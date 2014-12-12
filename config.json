@@ -1,5 +1,11 @@
 {
   "locals": {
     "title": "Brussels Photography"
-  }
+  },
+  "plugins": [
+   "wintersmith-less" 
+  ],
+  "ignore": [
+    "*.DS_Store"
+  ]
 }

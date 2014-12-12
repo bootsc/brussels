@@ -1,18 +1,9 @@
 doctype html
-html(lang='en')
-  head
-    meta(charset='utf-8')
-    title= locals.title
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Stardos+Stencil:400,700')
-    link(rel='stylesheet', href='/css/main.css')
+html(lang='en', class=page.metadata.type)
+  include partials/header
   body
-    div.nav
-        a(href="/")= 'HOME'
-        &#160;&#160;|&#160;&#160;
-        a(href="/about")= 'PHOTOS'
-        &#160;&#160;|&#160;&#160;
-        a(href="/about")= 'ABOUT'
-        p.copyright &#169; David Bouchat 2015
-    div.contents 
-        h1= page.title
-        != page.html
+    include partials/nav
+    div.contents
+        block content
+            != page.html
+    include partials/footer 

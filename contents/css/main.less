@@ -1,0 +1,98 @@
+@black: #000;
+@white: #fff;
+@light-grey: #f8f8f8;
+
+h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
+  margin: 0; padding: 0; border: 0;
+}
+
+html.home {
+  	background: url(https://dkf7jr2qs5wn9.cloudfront.net/images/MyFamily.jpg) no-repeat center center fixed; 
+	overflow: hidden;
+  	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
+
+	h1, h2 {
+		position: absolute;
+		color: white;
+		padding-left: 70px;
+	}
+	h1 {
+		font-family: 'Satisfy';
+		bottom: 100px;
+		font-size: 150px;
+	}
+	h2 {
+		font-size: 60px;
+		bottom: 70px;
+	}
+}
+
+.nav {
+	background: rgba(0,0,0,.5);
+	padding: 20px 30px;
+	font-size: 22px;
+	color: white;
+	width: 100%;
+	position: fixed;
+	a {
+		color: white;
+		text-decoration: none;
+	}	
+	a:hover {
+		color: #f8f8f8;
+	}
+}
+
+.contents {
+	padding: 60px 20px;
+	text-align: center;
+}
+
+.photos {
+	background-color: black;
+	.thumbnail {
+		width: 400px;
+		height: 400px;
+		display: inline-block;
+		margin: 12px;
+		.crop {
+			height: 100%;
+			color: @white;
+			overflow: hidden;
+			img { 
+				height: 100%;
+			}
+		}
+	}
+}
+
+.about {
+	background-color: @black;
+	color: @white;
+	h2 {
+		text-align: center;
+	}
+	.contents {
+		padding: 70px 20px;
+	}
+	.contents p {
+		margin: 0 auto;
+		margin-top: 10px;
+		width: 400px;
+		text-align: left;
+		a {
+			color: @white;
+		}
+	}
+}
+
+.copyright {
+	text-align: center;
+	color: grey;
+	font-size: 12px;
+	position: absolute;
+	bottom:15px;
+}
