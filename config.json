@@ -1,11 +1,13 @@
 {
   "locals": {
-    "title": "Brussels Photography"
+    "title": "Brussels Photography",
+    "cdn": "http://dkf7jr2qs5wn9.cloudfront.net"
   },
   "plugins": [
-   "wintersmith-less" 
+   "wintersmith-browserify",
+   "wintersmith-less"
   ],
   "ignore": [
-    "*.DS_Store"
+    "**/*.DS_Store"
   ]
 }

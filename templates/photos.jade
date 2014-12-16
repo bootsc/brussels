@@ -1,44 +1,14 @@
 mixin photo(title, file)
 	.thumbnail
 		.crop
-			a(href="http://dkf7jr2qs5wn9.cloudfront.net/images/"+file)
-				img(src="http://dkf7jr2qs5wn9.cloudfront.net/thumbnails/"+file, title=title)
+			a(href=locals.cdn + "/images/" + file)
+				img(src=locals.cdn + "/thumbnails/" + file, title=title)
 
 extends index
 block content
-	+photo("Veins", "veins.jpg")
-	+photo("Mirror", "mirrorcar.jpg")
-	+photo("Dexter", "dextercar.jpg")
-	+photo("Barn", "barn.jpg")
-	+photo("Mile Marker 13", "mile13.jpg")
-	+photo("Modern Cowboy", "moderncowboy.jpg")
-	+photo("Storm", "storm.jpg")
-	+photo("Yellowstone", "YellowstonePontiac.jpg")
-	+photo("Golden Gate", "goldengatebelair.jpg")
-	+photo("City from Sausalito", "cityfromsausalito.jpg")
-	+photo("Tire", "tire.jpg")
-	+photo("Abandoned", "utah.jpg")
-	+photo("Yellowstone River", "yellowstoneriver.jpg")
-	+photo("DeLuxe", "deluxe.jpg")
-	+photo("Shot to Death", "shottodeath.jpg")
-	+photo("Dexter", "dextersleeping.jpg")
-	+photo("Golden Gate", "goldengate.jpg")
-	+photo("Canyon", "canyon.jpg")
-	+photo("Cadillac Ranch", "cadillacranch.jpg")
-	+photo("Buffalo", "buffalo.jpg")
-	+photo("Red", "red.jpg")
-	+photo("Lets Race", "letsrace.jpg")
-	+photo("Arch", "arch.jpg")
-	+photo("Couple", "couple.jpg")
-	+photo("Multon Barn", "multonbarn.jpg")
-	+photo("Window Arch", "windowarch.jpg")
-	+photo("Falls", "falls.jpg")
-	+photo("Cowboy", "cowboy.jpg")
-	+photo("Fields", "fields.jpg")
-	+photo("Dexter", "dextercabin.jpg")
-	+photo("Fishing", "fishingpole.jpg")
-	+photo("My Family", "MyFamily.jpg")
-	+photo("48", "48.jpg")
-	+photo("Roys", "roys.jpg")
-	+photo("Beauty", "beauty.jpg")
+	each image in page.metadata.images
+		+photo(image.title, image.file)
+
+.modal
+	img(src=locals.cdn + "/images/cowboy.jpg") 
 

@@ -1,22 +1,23 @@
-@black: #000;
-@white: #fff;
-@light-grey: #f8f8f8;
+@background: #000;
+@text: #fff;
+@nav-background: rgba(0,0,0,.5);
+@thumbnail-size: 400px;
 
 h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
-  margin: 0; padding: 0; border: 0;
+	margin: 0; padding: 0; border: 0;
 }
 
 html.home {
-  	background: url(https://dkf7jr2qs5wn9.cloudfront.net/images/MyFamily.jpg) no-repeat center center fixed; 
+	background: url(https://dkf7jr2qs5wn9.cloudfront.net/images/MyFamily.jpg) no-repeat center center fixed; 
 	overflow: hidden;
-  	-webkit-background-size: cover;
- 	-moz-background-size: cover;
- 	-o-background-size: cover;
- 	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 
 	h1, h2 {
 		position: absolute;
-		color: white;
+		color: @text;
 		padding-left: 70px;
 	}
 	h1 {
@@ -31,14 +32,14 @@ html.home {
 }
 
 .nav {
-	background: rgba(0,0,0,.5);
+	background: @nav-background;
 	padding: 20px 30px;
 	font-size: 22px;
-	color: white;
+	color: @text;
 	width: 100%;
 	position: fixed;
 	a {
-		color: white;
+		color: @text;
 		text-decoration: none;
 	}	
 	a:hover {
@@ -52,15 +53,15 @@ html.home {
 }
 
 .photos {
-	background-color: black;
+	background-color: @background;
 	.thumbnail {
-		width: 400px;
-		height: 400px;
+		width: @thumbnail-size;
+		height: @thumbnail-size;
 		display: inline-block;
 		margin: 12px;
 		.crop {
 			height: 100%;
-			color: @white;
+			color: @text;
 			overflow: hidden;
 			img { 
 				height: 100%;
@@ -69,9 +70,21 @@ html.home {
 	}
 }
 
+.modal {
+	position: fixed;
+	visibility: hidden;
+	top: 66px;
+	width: 100%;
+	text-align: center;
+	z-index: 1000;
+	img {
+		max-width: 90%;
+	}
+}
+
 .about {
-	background-color: @black;
-	color: @white;
+	background-color: @background;
+	color: @text;
 	h2 {
 		text-align: center;
 	}
@@ -84,7 +97,7 @@ html.home {
 		width: 400px;
 		text-align: left;
 		a {
-			color: @white;
+			color: @text;
 		}
 	}
 }
