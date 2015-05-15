@@ -1,14 +1,15 @@
 mixin photo(title, file)
 	.thumbnail
 		.crop
-			a(onclick="openModal('" + file + "')")
+			a(onclick="openModal('" + file + "')", href="#modal")
 				img(src=locals.cdn + "/thumbnails/" + file, title=title)
 
 extends index
 block content
 	each image in page.metadata.images
 		+photo(image.title, image.file)
-
-.modal
-	img(src=locals.cdn + "/images/cowboy.jpg") 
+	
+	#modal.modalDialog
+		a(href="#close") Close
+		img(src=locals.cdn + "/images/veins.jpg") 
 
