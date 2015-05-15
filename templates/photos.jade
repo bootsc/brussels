@@ -1,14 +1,17 @@
-mixin photo(title, file)
-	.thumbnail
-		.crop
-			a(href=locals.cdn + "/images/" + file)
-				img(src=locals.cdn + "/thumbnails/" + file, title=title)
-
 extends index
 block content
-	each image in page.metadata.images
-		+photo(image.title, image.file)
-
-.modal
-	img(src=locals.cdn + "/images/cowboy.jpg") 
-
+	div(ng-controller="ModalCtrl")
+		span(ng-repeat="image in photos")
+			.thumbnail
+				.crop
+					a(ng-click="selectPhoto($index)", href="#modal")
+						img(ng-src=locals.cdn + "/thumbnails/{{image.file}}", ng-title="{{image.title}}")
+	
+		#modal.modalDialog(ng-if="photoSelected()")
+			a(ng-click="clearSelected()", href="#") 
+				img.close(src="/icons/close.ico", alt="Close")
+			img.photo(ng-src=locals.cdn + "/images/{{photos[selectedPhoto].file}}") 
+			a(ng-click="prev()", href="#modal")
+				img.leftArrow(src="/icons/left_arrow.ico")
+			a(ng-click="next()", href="#modal")
+				img.rightArrow(src="/icons/right_arrow.ico")

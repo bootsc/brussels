@@ -3,6 +3,47 @@
 @nav-background: rgba(0,0,0,.5);
 @thumbnail-size: 400px;
 
+.modalDialog {
+	position: fixed;
+	z-index: 99;
+	opacity: 0;
+	pointer-events: none;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+
+	.leftArrow {
+		float: left;
+		margin-top:	30%;
+	}
+	.rightArrow {
+		float: right;
+		margin-top: 30%;
+	}
+			
+	.close {
+		width: 30px;
+		float: right;
+		padding-right: 20px;
+	}
+
+	.photo {
+		position: relative;
+		max-width: 80%;
+		max-height: 80%;
+		flex-shrink: 0;
+	}
+}
+
+.modalDialog:target {
+	opacity: 1;
+	pointer-events: auto;
+	background: rgba(0,0,0,.8);
+}
+
 h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
 	margin: 0; padding: 0; border: 0;
 }
