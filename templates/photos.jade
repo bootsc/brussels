@@ -1,7 +1,7 @@
 mixin photo(title, file)
 	.thumbnail
 		.crop
-			a(href=locals.cdn + "/images/" + file)
+			a(onclick="openModal('" + file + "')")
 				img(src=locals.cdn + "/thumbnails/" + file, title=title)
 
 extends index
