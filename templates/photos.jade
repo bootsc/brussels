@@ -1,7 +1,7 @@
 mixin photo(title, file)
 	.thumbnail
 		.crop
-			a(onclick="openModal('" + file + "')", href="#modal")
+			a(ng-click="selectPhoto('" + file + "')", href="#modal")
 				img(src=locals.cdn + "/thumbnails/" + file, title=title)
 
 extends index
@@ -12,5 +12,5 @@ block content
 	
 		#modal.modalDialog
 			a(href="#close") Close
-			img(src=locals.cdn + "/images/veins.jpg") 
+			img(ng-src=locals.cdn + "/images/{{selectedPhoto}}") 
 

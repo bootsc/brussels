@@ -1,10 +1,11 @@
 
 angular.module('Brussels', [])
-	.controller('ModalCtrl', function() {
-		console.log('modal ctrl');
+	.controller('ModalCtrl', function($scope) {
+		$scope.selectedPhoto = null;
+		$scope.selectPhoto = function( photo ) {
+			$scope.selectedPhoto = photo;
+		}
 	})
 ;
 
-
-openModal = function(file) { console.log('open modal with file: '+ file); }
 
