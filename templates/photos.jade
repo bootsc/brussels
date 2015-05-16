@@ -11,6 +11,8 @@ block content
 			+photo(image.title, image.file)
 	
 		#modal.modalDialog(ng-if="selectedPhoto")
-			a(ng-click="selectPhoto(null)", href="#") Close
-			img(ng-src=locals.cdn + "/images/{{selectedPhoto}}") 
-
+			a(ng-click="selectPhoto(null)", href="#") 
+				img.close(src="/icons/close.ico", alt="Close")
+			img.photo(ng-src=locals.cdn + "/images/{{selectedPhoto}}") 
+			img.leftArrow(src="/icons/left_arrow.ico")
+			img.rightArrow(src="/icons/right_arrow.ico")
