@@ -7,6 +7,7 @@ angular.module('Brussels', [])
 		$scope.selectPhoto = function( i ) {
 			$scope.selectedPhoto = i;
 		}
+		$scope.photoSelected = function() { return $scope.selectedPhoto != null; }
 		$scope.next = function() {
 			$scope.selectedPhoto += 1 % photos.length;
 		};
