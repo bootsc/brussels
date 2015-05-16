@@ -6,10 +6,11 @@ mixin photo(title, file)
 
 extends index
 block content
-	each image in page.metadata.images
-		+photo(image.title, image.file)
+	div(ng-controller="ModalCtrl")
+		each image in page.metadata.images
+			+photo(image.title, image.file)
 	
-	#modal.modalDialog
-		a(href="#close") Close
-		img(src=locals.cdn + "/images/veins.jpg") 
+		#modal.modalDialog
+			a(href="#close") Close
+			img(src=locals.cdn + "/images/veins.jpg") 
 
