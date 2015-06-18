@@ -8,7 +8,7 @@ block content
 						img(ng-src=locals.cdn + "/thumbnails/{{image.file}}", ng-title="{{image.title}}")
 	
 		#modal.modalDialog(ng-if="photoSelected()")
-			a(ng-click="selectedPhoto=null", href="#") 
+			a(ng-click="clearSelected()", href="#") 
 				img.close(src="/icons/close.ico", alt="Close")
 			img.photo(ng-src=locals.cdn + "/images/{{photos[selectedPhoto].file}}") 
 			a(ng-click="prev()", href="#modal")
