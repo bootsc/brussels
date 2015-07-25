@@ -1,7 +1,22 @@
+mixin divider()
+	span &nbsp;&nbsp;|&nbsp;&nbsp;
+
 extends index
 block content
+
+	div.topics
+		a(ng-click="topic = 'Cuba'", href="#") Cuba
+		+divider()
+		a(ng-click="topic = 'Bonneville'", href="#") Bonneville
+		+divider()
+		a(ng-click="topic = 'Landscape'", href="#") Landscape
+		+divider()
+		a(ng-click="topic = 'California'", href="#") California
+		+divider()
+		a(ng-click="topic = 'Desert'", href="#") Desert
+
 	div(ng-controller="ModalCtrl")
-		span(ng-repeat="image in photos")
+		span(ng-repeat="image in photos | filter:{tags: topic}")
 			.thumbnail
 				.crop
 					a(ng-click="selectPhoto($index)", href="#modal")
