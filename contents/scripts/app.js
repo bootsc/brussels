@@ -1,7 +1,7 @@
 angular.module('Brussels', [])
 
 	.controller('ModalCtrl', function($scope, photos) {
-		$scope.photos = photos;
+		$scope.photos = photos.sort(function(x,y) {return Math.random() - 0.5;});
 	})
 
 	.constant('photos', [
@@ -63,6 +63,19 @@ angular.module('Brussels', [])
         { "title": "cuba", "file": "cuba-14.jpg", "tags": "Cuba" },
         { "title": "cuba", "file": "cuba-15.jpg", "tags": "Cuba" },
         { "title": "cuba", "file": "cuba-16.jpg", "tags": "Cuba" },
+        { "title": "photo", "file": "photo-1.jpg", "tags": "Landscape" },
+        { "title": "photo", "file": "photo-2.jpg", "tags": "Landscape" },
+        { "title": "photo", "file": "photo-3.jpg", "tags": "Cuba, Landscape" },
+        { "title": "photo", "file": "photo-4.jpg", "tags": "Bonneville, Landscape" },
+        { "title": "photo", "file": "photo-5.jpg", "tags": "Bonneville" },
+        { "title": "photo", "file": "photo-6.jpg", "tags": "California" },
+        { "title": "photo", "file": "photo-7.jpg", "tags": "California, Landscape" },
+        { "title": "photo", "file": "photo-8.jpg", "tags": "California" },
+        { "title": "photo", "file": "photo-9.jpg", "tags": "Landscape" },
+        { "title": "photo", "file": "photo-11.jpg", "tags": "California" },
+        { "title": "photo", "file": "photo-12.jpg", "tags": "" },
+        { "title": "photo", "file": "photo-14.jpg", "tags": "Landscape" },
+        { "title": "photo", "file": "photo-15.jpg", "tags": "Landscape" },
 			]
 	)
 ;
