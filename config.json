@@ -8,6 +8,6 @@
    "wintersmith-less"
   ],
   "ignore": [
-    "**/*.DS_Store"
+    ".DS_Store"
   ]
 }
