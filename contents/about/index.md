@@ -11,7 +11,7 @@ His currently has two books available: [Cuba and it's Cars] and [The Bonneville 
 
 He is on Instagram at [@brusselsphotography] and can be reached at <a href="mailto:hello@davidbouchat.com" target="_top">hello@davidbouchat.com</a>.
 
-[@brusselsphotography]: http://instagram/brusselsphotography
+[@brusselsphotography]: http://instagram.com/brusselsphotography
 [500px]: https://500px.com/davidbouchat
 [Cuba and it's Cars]: http://www.blurb.com/b/6385893-cuba-and-its-cars 
 [The Bonneville Salt Flats]: http://www.blurb.com/b/6388667-the-bonneville-salt-flats
