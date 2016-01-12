@@ -7,11 +7,15 @@ block content
 	div.topics
 		a(ng-click="topic = 'Cuba'", href="#") Cuba
 		+divider()
+		a(ng-click="topic = 'NYC'", href="#") NYC
+		+divider()
 		a(ng-click="topic = 'Bonneville'", href="#") Bonneville
 		+divider()
 		a(ng-click="topic = 'Landscape'", href="#") Landscape
 		+divider()
 		a(ng-click="topic = 'California'", href="#") California
+		+divider()
+		a(ng-click="topic = 'TROG'", href="#") TROG
 
 	div(ng-controller="ModalCtrl")
 		span(ng-repeat="image in photos | filter:{tags: topic}")
